@@ -1,5 +1,24 @@
 # INSERTION SORT
 
+Insertion sort is a simple sorting algorithm that works by iteratively inserting each element of an unsorted list into its correct position in a sorted portion of the list.
+It is a "stable" sorting algorithm, meaning that elements with equal values maintain their relative order in the sorted output.
+It is an “in-place” sorting algorithm, meaning it doesn’t require any additional memory space beyond the original array.
+
+Algorithm:
+We have to start with second element of the array as first element in the array is assumed to be sorted.
+Compare second element with the first element and check if the second element is smaller then swap them.
+Move to the third element and compare it with the second element, then the first element and swap as necessary to put it in the correct position among the first three elements.
+Continue this process, comparing each element with the ones before it and swapping as needed to place it in the correct position among the sorted elements.
+Repeat until the entire array is sorted.
+
+Time Complexity of Insertion Sort:
+Best case: O(n), If the list is already sorted, where n is the number of elements in the list.
+Average case: O(n2), If the list is randomly ordered
+Worst case: O(n2), If the list is in reverse order
+
+Space Complexity of Insertion Sort:
+Auxiliary Space: O(1), Insertion sort requires O(1) additional space, making it a space-efficient sorting algorithm.
+
 void insertionSort(int arr[] , int n)
 {
    for(int i=1 ; i<n ; i++)
@@ -14,6 +33,10 @@ void insertionSort(int arr[] , int n)
        arr[j+1] = curr;
    }
 }
+
+# SELECTION SORT
+
+Selection sort is a simple and efficient sorting algorithm that works by repeatedly selecting the smallest (or largest) element from the unsorted portion of the list and moving it to the sorted portion of the list. 
 
 void selectionSort(int arr[] , int n)
 {
@@ -30,6 +53,8 @@ void selectionSort(int arr[] , int n)
         swap(arr[i] , arr[minIndex]);
     }
 }
+
+# BUBBLE SORT
 
 void bubbleSort(int arr[] , int n)
 {
@@ -50,6 +75,8 @@ void bubbleSort(int arr[] , int n)
         }
     }
 }
+
+# MERGE SORT
 
 void merge(int arr[] , int start , int mid , int end)
 {
@@ -113,6 +140,8 @@ void mergeSort(int arr[] , int start , int end)
         merge(arr , start , mid , end);   
     }
 }
+
+# QUICK SORT
 
 int partition(int arr[] , int start , int end)
 {
